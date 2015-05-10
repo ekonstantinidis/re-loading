@@ -7,6 +7,9 @@ var loadingStyle = {
 };
 
 var Example = React.createClass({
+
+  displayName: 'ExampleCssClass',
+
   getInitialState: function () {
     return {
       loading: true
