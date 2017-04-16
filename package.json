@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "serve": "http-server 'demo/'",
-    "build": "mkdir -p demo/build/ && browserify -t reactify demo/index.js -o demo/build/app.js",
-    "watch": "npm run build && watchify -t reactify demo/index.js -o demo/build/app.js -v",
+    "build": "mkdir -p demo/build/ && webpack --devtool --progress --colors ",
+    "watch": "webpack --progress --colors --watch",
     "test": "jsxhint --reporter node_modules/jshint-stylish/stylish.js '*.js'"
   },
   "repository": {
@@ -31,10 +31,10 @@
     "react": "*"
   },
   "devDependencies": {
-    "browserify": "^10.1.2",
     "jshint-stylish": "^1.0.1",
     "jsxhint": "^0.14.0",
-    "reactify": "^1.1.0",
-    "watchify": "^3.2.1"
+    "jsx-loader": "^0.13.2",
+    "raw-loader": "^0.5.1",
+    "webpack": "^1.8.11"
   }
 }
